@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leffe DSR | Design Gráfico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+            background-color: #111;
+            border: 1px solid #333;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+        }
+        
+        .form-input {
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            border-radius: 0;
+            color: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom: 2px solid #fff;
+        }
+        
+        .form-input::placeholder {
+            color: #aaa;
+        }
+        
+        /* Estilos para mensagens de sucesso/erro */
+        .form-message {
+            display: none;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .form-message.success {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        .form-message.error {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        /* Botão personalizado */
+        .btn-primary {
+            background-color: #fff;
+            color: #000;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ddd;
+        }
+        
+        /* Navbar */
+        nav {
+            background-color: #000;
+            border-bottom: 1px solid #333;
+        }
+        
+        /* Seções */
+        .section-dark {
+            background-color: #000;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+        
+        .section-light {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav class="py-4">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">LEFFE<span class="font-light">DSR</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#portfolio" class="text-white hover:text-gray-300 transition">Portfólio</a>
+                <a href="#services" class="text-white hover:text-gray-300 transition">Serviços</a>
+                <a href="#about" class="text-white hover:text-gray-300 transition">Sobre</a>
+                <a href="#contact" class="text-white hover:text-gray-300 transition">Contato</a>
+            </div>
+            <button class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Design que <span class="border-b-4 border-white">impacta</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Criações visuais que contam histórias e impulsionam marcas</p>
+            <a href="#contact" class="btn-primary px-8 py-3 font-bold inline-block">Solicitar Orçamento</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 section-light">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Portfólio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item p-4">
+                    <img src="https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Design Project" class="w-full h-64 object-cover">
+                    <h3 class="text-xl font-bold mt-4 text-white">Identidade Visual</h3>
+                    <p class="text-gray-400">Cafeteria Artesanal</p>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item p-4">
+                    <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" alt="Design Project" class="w-full h-64 object-cover">
+                    <h3 class="text-xl font-bold mt-4 text-white">Cartão de Visita</h3>
+                    <p class="text-gray-400">Consultoria Financeira</p>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item p-4">
+                    <img src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Design Project" class="w-full h-64 object-cover">
+                    <h3 class="text-xl font-bold mt-4 text-white">Social Media</h3>
+                    <p class="text-gray-400">Marca de Moda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 section-dark">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-black p-8 text-center border border-gray-800">
+                    <div class="text-4xl mb-4 text-white">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Identidade Visual</h3>
+                    <p class="text-gray-400">Criação de logotipos, cartões de visita, papelaria e diretrizes de marca.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-black p-8 text-center border border-gray-800">
+                    <div class="text-4xl mb-4 text-white">
+                        <i class="fas fa-ad"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Materiais Gráficos</h3>
+                    <p class="text-gray-400">Flyers, banners, outdoors e outros materiais promocionais.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-black p-8 text-center border border-gray-800">
+                    <div class="text-4xl mb-4 text-white">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Social Media</h3>
+                    <p class="text-gray-400">Posts, stories e artes para redes sociais com identidade única.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 section-light">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold mb-6 text-white">Sobre Mim</h2>
+                <div class="max-w-2xl mx-auto">
+                    <p class="text-gray-400 mb-4">Sou Leffe DSR, designer gráfico com 5 anos de experiência criando identidades visuais impactantes para marcas de diversos segmentos.</p>
+                    <p class="text-gray-400 mb-4">Minha abordagem combina estética minimalista com funcionalidade, sempre buscando transmitir a essência de cada projeto através do design.</p>
+                    <p class="text-gray-400">Acredito que um bom design não apenas chama atenção, mas também comunica valores e constrói conexões emocionais com o público.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 section-dark">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Solicite Seu Orçamento</h2>
+            <div class="max-w-2xl mx-auto">
+                <!-- Mensagens de status do formulário -->
+                <div id="formSuccess" class="form-message success">
+                    <i class="fas fa-check-circle mr-2"></i> Solicitação enviada com sucesso! Entrarei em contato em breve.
+                </div>
+                <div id="formError" class="form-message error">
+                    <i class="fas fa-exclamation-circle mr-2"></i> Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente mais tarde.
+                </div>
+                
+                <!-- Formulário com campo de telefone -->
+                <form id="orcamentoForm" action="https://formspree.io/f/mwpovvnn" method="POST" class="space-y-6">
+                    <input type="hidden" name="_subject" value="Novo Orçamento - Leffe DSR Design">
+                    <input type="hidden" name="_replyto" id="replyTo">
+                    
+                    <div>
+                        <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo" class="form-input w-full py-2 px-1" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Seu Melhor Email" class="form-input w-full py-2 px-1" required>
+                    </div>
+                    <div>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Seu WhatsApp (com DDD)" class="form-input w-full py-2 px-1" required>
+                    </div>
+                    <div>
+                        <textarea id="mensagem" name="mensagem" placeholder="Descreva seu projeto (quanto mais detalhes, melhor)" rows="5" class="form-input w-full py-2 px-1" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-primary px-8 py-3 font-bold w-full">
+                            <span id="submitText">Enviar Orçamento</span>
+                            <span id="submitLoading" class="hidden">
+                                <i class="fas fa-spinner fa-spin mr-2"></i> Enviando...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <h3 class="text-xl font-bold mb-4 text-white">Ou entre em contato diretamente</h3>
+                <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-4 md:space-y-0">
+                    <a href="https://wa.me/38991395920" class="flex items-center space-x-2 hover:text-gray-300 transition text-white">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>(38) 99139-5920</span>
+                    </a>
+                    <a href="mailto:alefevander@gmail.com" class="flex items-center space-x-2 hover:text-gray-300 transition text-white">
+                        <i class="fas fa-envelope text-2xl"></i>
+                        <span>alefevander@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <p>&copy; 2023 Leffe DSR Design Gráfico. Todos os direitos reservados.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-behance"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Form submission handler with Formspree
+        document.getElementById('orcamentoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            document.getElementById('submitText').classList.add('hidden');
+            document.getElementById('submitLoading').classList.remove('hidden');
+            
+            // Set reply-to email
+            const email = document.getElementById('email').value;
+            document.getElementById('replyTo').value = email;
+            
+            // Submit form via Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message
+                    document.getElementById('formSuccess').style.display = 'block';
+                    document.getElementById('formError').style.display = 'none';
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Scroll to show success message
+                    document.getElementById('contact').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    throw new Error('Erro na resposta do servidor');
+                }
+            })
+            .catch(error => {
+                // Show error message
+                document.getElementById('formError').style.display = 'block';
+                document.getElementById('formSuccess').style.display = 'none';
+                
+                // Scroll to show error message
+                document.getElementById('contact').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            })
+            .finally(() => {
+                // Reset button state
+                document.getElementById('submitText').classList.remove('hidden');
+                document.getElementById('submitLoading').classList.add('hidden');
+            });
+        });
+
+        // Máscara para telefone
+        document.getElementById('telefone').addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, '');
+            
+            if (value.length > 11) {
+                value = value.substring(0, 11);
+            }
+            
+            // Formatação do telefone
+            if (value.length > 0) {
+                value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+            }
+            if (value.length > 10) {
+                value = value.replace(/(\d{5})(\d)/, '$1-$2');
+            } else if (value.length > 6) {
+                value = value.replace(/(\d{4})(\d)/, '$1-$2');
+            }
+            
+            this.value = value;
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Alefeeeeeee/leffe-dsr-site" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
